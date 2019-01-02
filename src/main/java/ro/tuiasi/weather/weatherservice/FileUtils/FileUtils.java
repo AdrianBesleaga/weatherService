@@ -16,7 +16,10 @@ public class FileUtils {
       FileWriter outputfile = new FileWriter(file, true);
 
       // create CSVWriter object filewriter object as parameter
-      CSVWriter writer = new CSVWriter(outputfile);
+
+      CSVWriter writer = new CSVWriter(outputfile, ',', CSVWriter.NO_QUOTE_CHARACTER,
+              CSVWriter.DEFAULT_ESCAPE_CHARACTER,
+              CSVWriter.DEFAULT_LINE_END);
 
       // adding header to csv
       if(file.length() == 0) {
